@@ -12,7 +12,7 @@ public class MyUtilsTest {
 
 	@Test
 	public void test() {
-		
+	
 		//TESTS
 		List<Integer> listInteger1 = new ArrayList<Integer>();	
 		List<Integer> listInteger2 = new ArrayList<Integer>();	
@@ -30,6 +30,18 @@ public class MyUtilsTest {
 		Float f5 = 5F;
 
 		Integer sum = i1 + i2 + i3 + i4 + i5;
+		
+		// TESTS COMPARE
+		
+		int[] tab1 = { 1, 5, 7, 8, 8, 9 };
+		int[] tab2 = { 1, 1, 5, 7, 8, 9 };
+
+		System.out.println("Test assert(Services.compare(tab1, tab2)");
+		System.out.println("");
+		
+		boolean b = MyUtils.compare(tab1, tab2);
+		
+		assert(b);
 		
 		// TEST 1
 		
