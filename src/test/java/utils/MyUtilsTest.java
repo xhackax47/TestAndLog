@@ -17,6 +17,7 @@ public class MyUtilsTest {
 		List<Integer> listInteger1 = new ArrayList<Integer>();	
 		List<Integer> listInteger2 = new ArrayList<Integer>();	
 		List<Float> listFloat = new ArrayList<Float>();	
+		String s = "s";
 		Integer i1 = 1;
 		Integer i2 = 2;
 		Integer i3 = 3;
@@ -41,7 +42,6 @@ public class MyUtilsTest {
 		// TEST 2
 		
 		Integer sum2 = MyUtils.sum(listInteger1);
-		String s = "test";
 		
 		// TEST 3
 		
@@ -71,23 +71,27 @@ public class MyUtilsTest {
 
 		// EXECUTION TESTS
 		assertNotNull(MyUtils.emptyToNull(s));
-		System.out.println("Sysout de la methode emptyToNull sur s : ");
+		assertEquals(sum2, sum);
+		assertEquals(listInteger2,listIntegerF);
+		assertEquals(listeFloatCarre, listeFloatF);
+		
+		// RETOUR SYSOUT TESTS
+		System.out.println("Sysout de la methode MyUtils.emptyToNull sur s : ");
 		System.out.println(MyUtils.emptyToNull(s));
 		System.out.println("");
 
-		assertEquals(sum2, sum);
-		System.out.println("");
-		System.out.println("Sysout de la methode sum sur listInteger1 : ");
+		
+		System.out.println("Sysout de la methode MyUtils.sum sur listInteger1 : ");
 		System.out.println(MyUtils.sum(listInteger1));
 		System.out.println("");
 		
-		assertEquals(listInteger2,listIntegerF);
-		System.out.println("Sysout de la methode filterEvenNumbers sur listInteger1 : ");
+		
+		System.out.println("Sysout de la methode MyUtils.filterEvenNumbers sur listInteger1 : ");
 		System.out.println(MyUtils.filterEvenNumbers(listInteger1));
 		System.out.println("");
 
-		assertEquals(listeFloatCarre, listeFloatF);
-		System.out.println("Sysout de la methode transformSquarePlusPointFive sur listFloat : ");
+		
+		System.out.println("Sysout de la methode MyUtils.transformSquarePlusPointFive sur listFloat : ");
 		System.out.println(MyUtils.transformSquarePlusPointFive(listFloat));
 		System.out.println("");
 
