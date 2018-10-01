@@ -26,11 +26,14 @@ public class MyUtils {
 	public static List<Integer> filterEvenNumbers(List<Integer> integers) {
 		List<Integer> li = new ArrayList<Integer>();
 		
-		for(int nb:integers) {
-			if(nb % 2 == 0) {
-				li.add(nb);
-			}
-		}
+//		for(int nb:integers) {
+//			if(nb % 2 == 0) {
+//				li.add(nb);
+//			}
+//		}
+		
+		li = integers.stream().filter(nb-> nb % 2 == 0).collect(Collectors.toList());
+		
 		return li;
 		
 	}
