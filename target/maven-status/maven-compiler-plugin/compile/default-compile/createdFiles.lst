@@ -1,1 +1,4 @@
+utils\HttpDataService.class
+app\App.class
 utils\MyIpService.class
+utils\MyUtils.class
