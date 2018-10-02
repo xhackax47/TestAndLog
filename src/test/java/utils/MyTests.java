@@ -15,10 +15,6 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MyTests {
 	
-	public MyTests() {
-		super();
-	}
-
 	List<Integer> listInteger1 = new ArrayList<Integer>();
 	List<Integer> listInteger2 = new ArrayList<Integer>();
 	List<Float> listFloat = new ArrayList<Float>();
@@ -39,6 +35,10 @@ public class MyTests {
 	Float f5 = 5F;
 
 	Integer sum = i1 + i2 + i3 + i4 + i5;
+	
+	public MyTests() {
+		super();
+	}
 	
 	@Before
 	public void before() {
@@ -147,25 +147,27 @@ public class MyTests {
 	@Test
 	public void testGetMyIp()  {
 		// TEST IP
+		
+		
 		HttpDataService h = new HttpDataService();
+		HttpDataServiceTest hTest = new HttpDataServiceTest();
 		MyIpService ipTest = new MyIpService(h);
-		MyIpService ipSTest = new MyIpService(h);
 
 		String ip = ipTest.getIp();
-		String ipS = ipSTest.mockGetJsonIP();
+		String ipMock = hTest.mockGetJsonIP();
 		String json = "{\"ip\":\"92.154.66.22\",\"about\":\"/about\",\"Pro!\":\"http://getjsonip.com\",\"reject-fascism\":\"Support the ACLU: https://action.aclu.org/secure/donate-to-aclu\"}";
 		
 		assertEquals("92.154.66.22", ip);
-		assertEquals(json, ipS);
+		assertEquals(json, ipMock);
 		
 		System.out.println("");
-		System.out.println("Sysout de la methode  MyIpService.getIp().toString() : ");
+		System.out.println("Sysout de la methode hTest.mockGetJsonIP().toString() : ");
 		System.out.println(ipTest.getIp().toString());
 		System.out.println("");
 		
 		System.out.println("");
-		System.out.println("Sysout de la methode  MyIpServiceTest.getMockIp().toString() : ");
-		System.out.println(ipSTest.mockGetJsonIP().toString());
+		System.out.println("Sysout de la methode hTest.mockGetJsonIP().toString() : ");
+		System.out.println(hTest.mockGetJsonIP().toString());
 		System.out.println("");
 	}
 }

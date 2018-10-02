@@ -1,0 +1,9 @@
+1755 [main] DEBUG utils.MyUtils - Message de log : Ceci est une string
+1757 [main] DEBUG utils.MyUtils - Going to divide 42 by 0
+1757 [main] ERROR utils.MyUtils - Erreur de division de 42 par 0 
+java.lang.ArithmeticException: / by zero
+	at app.App.main(App.java:38)
+1757 [main] INFO  utils.MyUtils - Log from MyUtils
+1757 [main] DEBUG utils.MyUtils - This is not logged from logger
+1757 [main] INFO  utils.MyUtils - This is logged from logger
+1757 [main] INFO  fr.xhackax47.tests - This is not logged from tests
