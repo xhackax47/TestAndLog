@@ -1,0 +1,16 @@
+16:27:13 1781 [main] DEBUG utils.MyUtils -
+				Message de log : Ceci est une string
+16:27:13 1782 [main] DEBUG utils.MyUtils -
+				Going to divide 42 by 0
+16:27:13 1782 [main] ERROR utils.MyUtils -
+				Erreur de division de 42 par 0 
+java.lang.ArithmeticException: / by zero
+	at app.App.main(App.java:38)
+16:27:13 1782 [main] INFO  utils.MyUtils -
+				Log from MyUtils
+16:27:13 1782 [main] DEBUG utils.MyUtils -
+				This is not logged from logger
+16:27:13 1782 [main] INFO  utils.MyUtils -
+				This is logged from logger
+16:27:13 1782 [main] INFO  fr.xhackax47.tests -
+				This is not logged from tests
