@@ -12,7 +12,7 @@ public class App {
 	private static final Logger logger = LoggerFactory.getLogger(MyUtils.class);
 
 	@SuppressWarnings("unused")
-	public static void main(String[] args) {
+	public static void start() {
 
 		// TESTING
 
